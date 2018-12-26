@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<launch>
+<!--	<arg name="model" default="$(find isis_man_description)/urdf/isis_man_description.urdf"/>-->
+	<arg name="model" default="$(find isis_man_description)/urdf/hitro_description.urdf"/>
+	<arg name="gui" default="true" />
+	<arg name="rvizconfig" default="$(find isis_man_description)/rviz/urdf.rviz"/>
+
+	<!--<param name="robot_description" command="$(find xacro)/xacro.py '$(arg model)'"/>-->
+	<param name="robot_description" textfile="$(arg model)"/>
+	<param name="use_gui" value="$(arg gui)"/>
+
+<!--	<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />-->
+	<node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
+
+	<node pkg="tf" type="static_transform_publisher" name="link1_broadcaster" args="0 0 0 0 0 0 1 world xbase 100" />
+	<node pkg="tf" type="static_transform_publisher" name="link2_broadcaster" args="0.3 0 -0.8 0 0 -1 1 world leap_base 100" />
+	<node pkg="tf" type="static_transform_publisher" name="link3_broadcaster" args="0 -0.08 0 0 0 0 1 world laser1 100" />
+<!--	<node pkg="tf" type="static_transform_publisher" name="laser12laser" args="0 0 0 3.14 0 0 laser1 laser 100" />-->
+	<node pkg="tf" type="static_transform_publisher" name="laser12laser" args="0 0 0 0 0 0 laser1 laser 100" />
+
+	<node pkg="tf" type="static_transform_publisher" name="world2ground" args="0 0 -0.1 0 0 0 1 world ground 100" />
+
+<!--	<node pkg="tf" type="static_transform_publisher" name="oculus_view_point" args="0 0 0 3.14 0 0 oculus view_point 15"/>-->
+
+
+	<node pkg="tf" type="static_transform_publisher" name="world2oculus_link" args="2 0 1 -3.14 0 0 world tracker  15"/><!--phantom to tracker-->
+
+	<node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true"/>
+
+	<node pkg="crawl_interface_matome" type="leap_ui" name="leap_ui"/>
+
+<!--	ロボットの状態を反映させるノードx-->
+	<node pkg="isis_control" type="hitro_state" name="hitro_state"/>
+
+	<node pkg="hitro_control" type="hitro_control" name="hitro_control"/>
+
+	<node pkg="joy" type="joy_node" name="joy_node">
+		<param name=" /dev" value="/dev/input/js0"/>
+		<param name=" /deadzone" value="0.05"/>
+	</node>
+
+<!--	URGの値から壁を描画する-->
+	<node pkg="isis_man_description" type="urg_description" name="urg_description"/>
+
+	<node pkg="leap_motion" type="hitro_leap.py" name="hitro_leap.py"/>
+<!--	<node pkg="isis_man_description" type="hitro_control_vms" name="hitro_control_vms"/>-->
+	<param name="target_image_topic" value="/usb_cam1/image_raw"/>
+
+<!--胴体検出-->
+	<node pkg="motion_detector" type="motion_detector_multi_node" name="motion_detector_multi_node">
+		<param name="target_image_topic" value="/usb_cam1/image_raw"/>
+	</node>
+
+	<node pkg="pattern_matching" type="pattern_matching_node" name="pattern_matching_node">
+		<param name="target_image_topic" value="/usb_cam1/image_raw"/>
+	</node>
+
+
+	<!--CO2センサ値表示用-->
+	<node name="rqt_plot" pkg="rqt_plot" type="rqt_plot" />
+</launch>

@@ -1,0 +1,40 @@
+<!-- -*- mode: XML -*- -->
+
+
+<launch>
+    <!-- Start tilt joint controller -->
+    <rosparam file="$(find goleg_control)/goleg_leg.yaml" command="load"/>
+    <node name="tilt_controller_spawner" pkg="dynamixel_controllers" type="controller_spawner.py"
+          args="--manager=dxl_manager
+                --port pan_tilt_port
+                tilt_controller11
+                tilt_controller12
+                tilt_controller13
+                tilt_controller14
+                pan_controller15
+                tilt_controller16
+                tilt_controller17
+                tilt_controller18
+                tilt_controller19
+                pan_controller20
+                tilt_controller21
+                tilt_controller22
+                tilt_controller23
+                tilt_controller24
+                pan_controller25
+                tilt_controller26
+                tilt_controller27
+                tilt_controller28
+                tilt_controller29
+                pan_controller1
+		"
+          output="screen"/>
+
+
+
+
+
+</launch>
+
+
+

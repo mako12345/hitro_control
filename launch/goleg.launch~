@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch>
+    <node name="goleg_wheel_control" pkg="goleg_control" type="goleg_wheel_control" />
+    <node name="joy_node" pkg="joy" type="joy_node" />
+	<!--<param name="/joy_node/dev" value="/dev/input/js1" />-->
+    <!--</node>-->
+</launch>

@@ -1,0 +1,7 @@
+<!-- -*- mode: XML -*- -->
+
+<launch>
+
+	<include file = "$(find eva)/launch/controller_manager1.launch"/>
+	<include file = "$(find eva)/launch/leg.launch"/>
+</launch>

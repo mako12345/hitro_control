@@ -1,0 +1,262 @@
+tilt_controller11:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: tilt_joint11
+    joint_speed: 0.8
+    motor:
+        id: 11
+        init: 2048
+        min: 0
+        max: 4095
+
+
+tilt_controller12:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: tilt_joint12
+    joint_speed: 0.8
+    motor:
+        id: 12
+        init: 1024
+        min: 0
+        max: 4095
+
+tilt_controller13:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: tilt_joint13
+    joint_speed: 0.8
+    motor:
+        id: 13
+        init: 2048
+        min: 0
+        max: 4095
+
+tilt_controller14:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: tilt_joint14
+    joint_speed: 0.8
+    motor:
+        id: 14
+        init: 2048
+        min: 0
+        max: 4095
+
+pan_controller15:
+    controller:
+        package: dynamixel_controllers
+        module: joint_torque_controller
+        type: JointTorqueController
+    joint_name: pan_joint15
+    joint_speed: 1.17
+    motor:
+        id: 15
+        init: 0
+        min: 0
+        max: 4095
+
+tilt_controller16:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: tilt_joint16
+    joint_speed: 0.8
+    motor:
+        id: 16
+        init: 2048
+        min: 0
+        max: 4095
+
+tilt_controller17:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: tilt_joint17
+    joint_speed: 0.8
+    motor:
+        id: 17
+        init: 3072
+        min: 0
+        max: 4095
+
+tilt_controller18:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: tilt_joint18
+    joint_speed: 0.8
+    motor:
+        id: 18
+        init: 2048
+        min: 0
+        max: 4095
+
+tilt_controller19:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: tilt_joint19
+    joint_speed: 0.8
+    motor:
+        id: 19
+        init: 2048
+        min: 0
+        max: 4095
+
+pan_controller20:
+    controller:
+        package: dynamixel_controllers
+        module: joint_torque_controller
+        type: JointTorqueController
+    joint_name: pan_joint20
+    joint_speed: 1.17
+    motor:
+        id: 20
+        init: 0
+        min: 0
+        max: 4095
+
+tilt_controller21:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: tilt_joint21
+    joint_speed: 0.8
+    motor:
+        id: 21
+        init: 2048
+        min: 0
+        max: 4095
+
+tilt_controller22:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: tilt_joint22
+    joint_speed: 0.8
+    motor:
+        id: 22
+        init: 3072
+        min: 0
+        max: 4095
+
+tilt_controller23:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: tilt_joint23
+    joint_speed: 0.8
+    motor:
+        id: 23
+        init: 2048
+        min: 0
+        max: 4095
+
+tilt_controller24:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: tilt_joint24
+    joint_speed: 0.8
+    motor:
+        id: 24
+        init: 2048
+        min: 0
+        max: 4095
+
+pan_controller25:
+    controller:
+        package: dynamixel_controllers
+        module: joint_torque_controller
+        type: JointTorqueController
+    joint_name: pan_joint25
+    joint_speed: 1.17
+    motor:
+        id: 25
+        init: 0
+        min: 0
+        max: 4095
+
+tilt_controller26:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: tilt_joint26
+    joint_speed: 0.8
+    motor:
+        id: 26
+        init: 2048
+        min: 0
+        max: 4095
+
+tilt_controller27:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: tilt_joint27
+    joint_speed: 0.8
+    motor:
+        id: 27
+        init: 3072
+        min: 0
+        max: 4095
+
+tilt_controller28:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: tilt_joint28
+    joint_speed: 0.8
+    motor:
+        id: 28
+        init: 2048
+        min: 0
+        max: 4095
+
+tilt_controller29:
+    controller:
+        package: dynamixel_controllers
+        module: joint_position_controller
+        type: JointPositionController
+    joint_name: tilt_joint29
+    joint_speed: 0.8
+    motor:
+        id: 29
+        init: 2048
+        min: 0
+        max: 4095
+
+pan_controller30:
+    controller:
+        package: dynamixel_controllers
+        module: joint_torque_controller
+        type: JointTorqueController
+    joint_name: pan_joint30
+    joint_speed: 1.17
+    motor:
+        id: 30
+        init: 0
+        min: 0
+        max: 4095
+
+
